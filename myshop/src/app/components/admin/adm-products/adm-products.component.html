@@ -2,6 +2,7 @@
   <app-menu></app-menu>
   <div class="content" style="width: 100%;">
     <div class="content-header"><h2>Products</h2></div>
+    <button (click)="getProducts()">Odświez</button>
     <div class="content-container">
       <table style="margin: 0 auto;">
         <thead>
@@ -53,7 +54,11 @@
                   <li>Kategoria: {{ product.category }}</li>
                 </ul>
               </td>
-              <td><button>Usuń</button></td>
+              <td>
+                <button (click)="this.mainService.removeProduct(product.id)">
+                  Usuń
+                </button>
+              </td>
             </tr></ng-container
           >
         </tbody>
