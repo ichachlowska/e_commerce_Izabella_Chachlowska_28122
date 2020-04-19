@@ -1,8 +1,11 @@
 <div>
-  <div style="display: flex;flex-direction: row;">
+  <div style="display: flex; flex-direction: row;">
     <img src="https://via.placeholder.com/100" alt="" />
     <h2>Sklep</h2>
   </div>
+
+  <button routerlink="/adm_dashboard">Panel Administratora</button>
+
   <div style="display: flex; justify-content: center;">
     <input type="text" [(ngModel)]="this.mainService.productsRequest.name" />
     <button
