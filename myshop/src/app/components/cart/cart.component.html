@@ -1,6 +1,6 @@
 <app-panel-top></app-panel-top>
 <div class="products">
-  <table style="margin:0 auto;" id="cartTable">
+  <table id="cartTable">
     <thead *ngIf="this.mainService.products">
       <tr>
         <th>obrazek</th>
@@ -8,18 +8,20 @@
       </tr>
     </thead>
     <tbody>
-      <ng-container *ngFor="let object of this.mainService.cart"
-        ><tr style="background-color: whitesmoke;">
-          <td><img src="{{ object.product.thumbnail }}" alt="" /></td>
-          <td>
+      <ng-container *ngFor="let object of this.mainService.cart">
+        <div class="basket__result">
+          <div class="basket__result__image">
+            <img src="{{ object.product.thumbnail }}" alt="" />
+          </div>
+          <div class="basket__result__details">
             <ul>
               <li>Tytuł: {{ object.product.title }}</li>
               <li>Cena: {{ object.product.price }}</li>
               <li>Kategoria: {{ object.product.category }}</li>
             </ul>
-          </td>
-        </tr></ng-container
-      >
+          </div>
+        </div>
+      </ng-container>
     </tbody>
   </table>
   <div class="summary">
@@ -59,14 +61,14 @@
         ><input
           type="hidden"
           name="products[]"
-          value="{{ object | json }}"/></ng-container
+          value="{{ object | json }}" /></ng-container
       ><label for=""
         >Akceptuję regulamin:<input
           #regulamin
           type="checkbox"
           name="aggrement"
           id=""
-          (change)="(0)"/></label
+          (change)="(0)" /></label
       ><button [disabled]="!regulamin.checked" (click)="paymentForm.submit()">
         Kup
       </button>

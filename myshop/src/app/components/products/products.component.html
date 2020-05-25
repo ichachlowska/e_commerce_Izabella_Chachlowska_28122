@@ -3,7 +3,7 @@
 <button routerLink="/landing">Powrót</button>
 
 <div class="products">
-  <table style="margin:0 auto;" id="productsTable">
+  <table style="margin: 0 auto;" id="productsTable">
     <thead *ngIf="this.mainService.products">
       <tr>
         <th>obrazek</th>
@@ -14,18 +14,25 @@
     <tbody>
       <ng-container
         *ngFor="let product of this.mainService.products?.productsTable"
-        ><tr style="background-color: whitesmoke;">
-          <td><img src="{{ product.thumbnail }}" alt="" /></td>
-          <td>
+      >
+        <div class="search__result">
+          <div class="search__result__image">
+            <img src="{{ product.thumbnail }}" alt="" />
+          </div>
+          <div class="search__result__details">
             <ul>
               <li>Tytuł: {{ product.title }}</li>
               <li>Cena: {{ product.price }}</li>
               <li>Kategoria: {{ product.category }}</li>
             </ul>
-          </td>
-          <td><button (click)="addToCart(product)">Do koszyka</button></td>
-        </tr></ng-container
-      >
+          </div>
+          <div class="search__result__addToBasket">
+            <button (click)="addToCart(product)" class="btn">
+              Do koszyka
+            </button>
+          </div>
+        </div>
+      </ng-container>
     </tbody>
   </table>
 </div>

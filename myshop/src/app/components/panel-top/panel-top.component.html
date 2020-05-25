@@ -1,10 +1,24 @@
 <div>
-  <div style="display: flex; flex-direction: row;">
-    <img src="https://via.placeholder.com/100" alt="" />
-    <h2>Sklep</h2>
-  </div>
+  <link
+    href="https://fonts.googleapis.com/css?family=Cinzel"
+    rel="stylesheet"
+  />
 
-  <button routerLink="/adm_dashboard">Panel Administratora</button>
+  <button routerLink="/adm_dashboard" style="display: flex;">
+    Panel Administratora
+  </button>
+  <div style="display: flex; flex-direction: row; text-align: center;">
+    <style></style>
+    <div class="container">
+      <img
+        src="https://i.ya-webdesign.com/images/80s-vector-neon-city-2.png"
+        class="image"
+      />
+      <div class="overlay">
+        <div class="text">Kup sobie grę</div>
+      </div>
+    </div>
+  </div>
 
   <div style="display: flex; justify-content: center;">
     <input type="text" [(ngModel)]="this.mainService.productsRequest.name" />
@@ -12,7 +26,7 @@
       (click)="this.mainService.getProducts(this.mainService.productsRequest)"
       routerLink="/products"
     >
-      Szukaj Produktu
+      <img src="assets/obrazki/search.png" style="height: 20px;" />
     </button>
   </div>
   <div>
