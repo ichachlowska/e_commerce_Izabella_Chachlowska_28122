@@ -3,5 +3,21 @@
   <div class="content" style="width: 100%;">
     <div class="content-header"><h2>DASHBOARD</h2></div>
     <div class="content-container"><h2>rzeczy</h2></div>
+    <div class="content-container">
+      <h2>Zamówienia</h2>
+      <div class="order_page">
+        <div
+          class="order_data"
+          *ngFor="let order of this.mainService.orders?.orders"
+        >
+          <div class="order_id">{{ order.id }}</div>
+          <div class="first_name">{{ order.first_name }}</div>
+          <div class="last_name">{{ order.last_name }}</div>
+          <div class="email">{{ order.email }}</div>
+          <div class="price">{{ order.price }}</div>
+          <div class="date">{{ order.date_end }}</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
