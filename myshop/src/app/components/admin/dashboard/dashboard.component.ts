@@ -44,10 +44,8 @@ export class DashboardComponent implements OnInit {
   public barChartLegend = true;
   public barChartPlugins = [pluginDataLabels];
   public barChartData: ChartDataSets[] = [
-    {
-      data: [],
-      label: "Series A",
-    },
+    { data: [65, 59, 80, 81, 56, 55, 40], label: "Series A" },
+    { data: [28, 48, 40, 19, 86, 27, 90], label: "Series B" },
   ];
 
   public chartClicked({
@@ -72,31 +70,15 @@ export class DashboardComponent implements OnInit {
 
   public randomize(): void {
     // Only Change 3 values
-
-    var dates = document.getElementsByClassName("date");
-    var arrayNumbers = [];
-    var newDate;
-    var uniqueDates;
-
-    for (var i = 0; i < dates.length; i++) {
-      arrayNumbers.push(dates.item(i).innerHTML);
-    }
-
-    const arrayDates = [];
-
-    for (const key in dates) {
-      if (typeof dates[key].innerHTML === "string")
-        newDate = dates[key].innerHTML;
-      arrayDates.push(
-        newDate.replace("2020-", "").substring(0, 5).replace("-", ".")
-      );
-    }
-
-    uniqueDates = [...new Set(arrayDates)];
-
-    console.log(arrayDates);
-    console.log(uniqueDates);
-
-    this.barChartLabels = arrayDates;
+    const data = [
+      Math.round(Math.random() * 100),
+      59,
+      80,
+      Math.random() * 100,
+      56,
+      Math.random() * 100,
+      40,
+    ];
+    this.barChartData[0].data = data;
   }
 }

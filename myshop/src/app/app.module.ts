@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { RouterModule, Routes } from "@angular/router";
 import { LandingComponent } from "./components/landing/landing.component";
@@ -12,7 +13,6 @@ import { CartComponent } from "./components/cart/cart.component";
 import { DashboardComponent } from "./components/admin/dashboard/dashboard.component";
 import { MenuComponent } from "./components/admin/menu/menu.component";
 import { AdmProductsComponent } from "./components/admin/adm-products/adm-products.component";
-
 import { ChartsModule } from "ng2-charts";
 
 const appRoutes: Routes = [
@@ -37,10 +37,11 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes),
     ChartsModule,
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent],
