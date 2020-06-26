@@ -47,3 +47,13 @@ input {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
+.top_section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket_class {
+  display: flex;
+  align-items: center;
+}

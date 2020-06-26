@@ -1,0 +1,28 @@
+#admin_content {
+  display: flex;
+}
+
+.containter {
+  flex-basis: 80%;
+}
+
+.order_data {
+  display: flex;
+}
+
+.order_data > div:first-child {
+  width: 5%;
+}
+
+.first_name,
+.last_name {
+  width: 17%;
+}
+
+.price {
+  width: 10%;
+}
+
+.email {
+  width: 30%;
+}

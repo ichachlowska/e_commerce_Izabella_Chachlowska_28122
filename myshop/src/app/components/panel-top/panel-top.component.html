@@ -20,18 +20,21 @@
     </div>
   </div>
 
-  <div style="display: flex; justify-content: center;">
-    <input type="text" [(ngModel)]="this.mainService.productsRequest.name" />
-    <button
-      (click)="this.mainService.getProducts(this.mainService.productsRequest)"
-      routerLink="/products"
-    >
-      <img src="assets/obrazki/search.png" style="height: 20px;" />
-    </button>
-  </div>
-  <div>
-    <button id="cartBtn" routerLink="/cart">
-      {{ getCartQuanity() }}
-    </button>
+  <div class="top_section">
+    <div style="display: flex; justify-content: center;">
+      <input type="text" [(ngModel)]="this.mainService.productsRequest.name" />
+      <button
+        (click)="this.mainService.getProducts(this.mainService.productsRequest)"
+        routerLink="/products"
+      >
+        <img src="assets/obrazki/search.png" style="height: 20px;" />
+      </button>
+    </div>
+    <div class="basket_class">
+      <img src="assets/obrazki/basket.png" style="height: 15px;" />
+      <button id="cartBtn" routerLink="/cart">
+        {{ getCartQuanity() }}
+      </button>
+    </div>
   </div>
 </div>

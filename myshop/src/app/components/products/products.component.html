@@ -1,38 +1,26 @@
 <app-panel-top></app-panel-top>
 
-<button routerLink="/landing">Powrót</button>
-
 <div class="products">
-  <table style="margin: 0 auto;" id="productsTable">
-    <thead *ngIf="this.mainService.products">
-      <tr>
-        <th>obrazek</th>
-        <th>dane</th>
-        <th>akcje</th>
-      </tr>
-    </thead>
-    <tbody>
-      <ng-container
-        *ngFor="let product of this.mainService.products?.productsTable"
-      >
-        <div class="search__result">
-          <div class="search__result__image">
-            <img src="{{ product.thumbnail }}" alt="" />
-          </div>
-          <div class="search__result__details">
-            <ul>
-              <li>Tytuł: {{ product.title }}</li>
-              <li>Cena: {{ product.price }}</li>
-              <li>Kategoria: {{ product.category }}</li>
-            </ul>
-          </div>
-          <div class="search__result__addToBasket">
-            <button (click)="addToCart(product)" class="btn">
-              Do koszyka
-            </button>
-          </div>
-        </div>
-      </ng-container>
-    </tbody>
-  </table>
+  <button routerLink="/landing">Powrót</button>
+  <ng-container
+    *ngFor="let product of this.mainService.products?.productsTable"
+  >
+    <div class="search__result">
+      <div class="search__result__image">
+        <img src="{{ product.thumbnail }}" alt="" />
+      </div>
+      <div class="search__result__details">
+        <ul>
+          <li>Tytuł: {{ product.title }}</li>
+          <li>Cena: {{ product.price }}</li>
+          <li>Kategoria: {{ product.category }}</li>
+        </ul>
+      </div>
+      <div class="search__result__addToBasket">
+        <button (click)="addToCart(product)" class="btn">
+          Do koszyka
+        </button>
+      </div>
+    </div>
+  </ng-container>
 </div>

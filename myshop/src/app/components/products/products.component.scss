@@ -1,12 +1,19 @@
-#productsTable {
-  img {
-    width: 180px;
-  }
-  td {
-    padding: 20px;
-  }
-}
-
 .search__result {
   display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 15px;
+}
+
+.search__result__addToBasket {
+  display: flex;
+  align-items: center;
+}
+
+.search__result__details {
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+.search__result__image img {
+  max-width: 150px;
 }
