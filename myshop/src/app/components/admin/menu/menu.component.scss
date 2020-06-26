@@ -1,0 +1,16 @@
+.menu_aside {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  @media (max-width: 757px) {
+    width: 100%;
+    display: block;
+  }
+}
+
+button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 5px 0;
+}

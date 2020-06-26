@@ -17,3 +17,13 @@
 .search__result__image img {
   max-width: 150px;
 }
+
+.adm_products {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 757px) {
+  .adm_products {
+    flex-direction: column;
+  }
+}

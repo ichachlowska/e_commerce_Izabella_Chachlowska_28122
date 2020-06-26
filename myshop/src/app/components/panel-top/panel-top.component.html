@@ -4,11 +4,22 @@
     rel="stylesheet"
   />
 
-  <button routerLink="/adm_dashboard" style="display: flex;">
+  <button
+    class="admin_button"
+    routerLink="/adm_dashboard"
+    style="display: flex;"
+  >
     Panel Administratora
   </button>
-  <div style="display: flex; flex-direction: row; text-align: center;">
-    <style></style>
+  <div
+    class="header_section"
+    style="
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      background: bisque;
+    "
+  >
     <div class="container">
       <img
         src="https://i.ya-webdesign.com/images/80s-vector-neon-city-2.png"
@@ -31,10 +42,10 @@
       </button>
     </div>
     <div class="basket_class">
-      <img src="assets/obrazki/basket.png" style="height: 15px;" />
       <button id="cartBtn" routerLink="/cart">
         {{ getCartQuanity() }}
       </button>
+      <img src="assets/obrazki/basket.png" style="height: 15px;" />
     </div>
   </div>
 </div>

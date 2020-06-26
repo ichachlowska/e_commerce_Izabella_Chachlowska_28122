@@ -3,15 +3,44 @@ button {
 }
 
 input {
-  width: 300px;
+  width: 100%;
+  margin-right: 5px;
+  border: none;
+  border-bottom: 1px solid bisque;
+}
+.admin_button {
+  border: 1px solid #ccc !important;
+  background: rgba(255, 255, 255, 0.6);
+  float: right;
+  color: #335db8;
+  transition: 0.33s ease all;
 }
 
+.admin_button:hover {
+  border: 1px solid bisque;
+  cursor: pointer;
+  color: bisque;
+}
+button {
+  background: none;
+}
 .container {
   position: relative;
   width: 100%;
-  margin: 5%;
 }
 
+.header_section {
+  position: relative;
+  width: 100%;
+}
+.header_section:before {
+  background: bisque;
+  position: absolute;
+  content: "";
+  width: 200vw;
+  height: 100%;
+  left: -50%;
+}
 .image {
   display: block;
   width: 100%;
@@ -51,6 +80,7 @@ input {
 .top_section {
   display: flex;
   justify-content: space-between;
+  margin: 15px 0;
 }
 
 .basket_class {

@@ -1,5 +1,9 @@
 #admin_content {
   display: flex;
+
+  @media (max-width: 757px) {
+    flex-direction: column;
+  }
 }
 
 .containter {
@@ -25,4 +29,18 @@
 
 .email {
   width: 30%;
+}
+@media (max-width: 757px) {
+  .first_name {
+    display: none;
+  }
+  .last_name {
+    width: 30%;
+  }
+  .date {
+    display: none;
+  }
+  .email {
+    width: 60%;
+  }
 }
